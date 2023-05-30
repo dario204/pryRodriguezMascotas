@@ -43,14 +43,16 @@
             this.btnCuidar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.mcrAgregarMascota = new System.Windows.Forms.GroupBox();
+            this.pbMascotas = new System.Windows.Forms.PictureBox();
             this.mcrAgregarMascota.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMascotas)).BeginInit();
             this.SuspendLayout();
             // 
             // lblVeterinaria
             // 
             this.lblVeterinaria.AutoSize = true;
             this.lblVeterinaria.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVeterinaria.Location = new System.Drawing.Point(257, 9);
+            this.lblVeterinaria.Location = new System.Drawing.Point(284, 9);
             this.lblVeterinaria.Name = "lblVeterinaria";
             this.lblVeterinaria.Size = new System.Drawing.Size(242, 51);
             this.lblVeterinaria.TabIndex = 0;
@@ -197,11 +199,21 @@
             this.mcrAgregarMascota.TabStop = false;
             this.mcrAgregarMascota.Text = "Agregar Mascota";
             // 
+            // pbMascotas
+            // 
+            this.pbMascotas.ErrorImage = null;
+            this.pbMascotas.Location = new System.Drawing.Point(439, 373);
+            this.pbMascotas.Name = "pbMascotas";
+            this.pbMascotas.Size = new System.Drawing.Size(273, 174);
+            this.pbMascotas.TabIndex = 15;
+            this.pbMascotas.TabStop = false;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(785, 706);
+            this.Controls.Add(this.pbMascotas);
             this.Controls.Add(this.mcrAgregarMascota);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCuidar);
@@ -212,8 +224,10 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
             this.Text = "Inicio";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.mcrAgregarMascota.ResumeLayout(false);
             this.mcrAgregarMascota.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMascotas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,6 +249,7 @@
         private System.Windows.Forms.Button btnCuidar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.GroupBox mcrAgregarMascota;
+        private System.Windows.Forms.PictureBox pbMascotas;
     }
 }
 

@@ -20,7 +20,48 @@ namespace pryRodriguezMascotas
 
         private void lstMascotas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            if (lstMascotas.Text=="Caniche")
+            {
+                pbMascotas.Image = Image.FromFile("caniche2.jpg");
+                lblTipo.Visible = true;
+                lblEdad.Visible = true;
+            }
+            else
+            {
+                if (lstMascotas.Text=="Gato")
+                {
+                    pbMascotas.Image = Image.FromFile("gato.jpg");
+                    lblTipo.Visible = true;
+                    lblEdad.Visible = true;
+                }
+                else
+                {
+                    if (lstMascotas.Text=="Loro")
+                    {
+                        pbMascotas.Image = Image.FromFile("loro.jpg");
+                        lblTipo.Visible = true;
+                        lblEdad.Visible = true;
+                    }
+                    else
+                    {
+                        if (lstMascotas.Text=="Hamster")
+                        {
+                            pbMascotas.Image = Image.FromFile("hamster.jpg");
+                            lblTipo.Visible = true;
+                            lblEdad.Visible = true;
+                        }
+                        else
+                        {
+                            if (lstMascotas.Text=="Pez")
+                            {
+                                pbMascotas.Image = Image.FromFile("pez.jpg");
+                                lblTipo.Visible = true;
+                                lblEdad.Visible = true;
+                            }
+                        }
+                    }
+                }
+            }
 
 
 
@@ -51,12 +92,12 @@ namespace pryRodriguezMascotas
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             string[] GuardarNombre = new string[10];
-            clsMascota nuevaMacota = new clsMascota();
-            nuevaMacota.Nombre = txtNombre.Text;
-            nuevaMacota.Edad = txtEdad.Text;
-            nuevaMacota.TipoMascota = cboTipo.Text;
+            clsMascota nuevaMascota = new clsMascota();
+            nuevaMascota.Nombre = txtNombre.Text;
+            nuevaMascota.Edad = txtEdad.Text;
+            nuevaMascota.TipoMascota = cboTipo.Text;
             List<clsMascota> listaMascotas = new List<clsMascota>();
-            listaMascotas.Add(nuevaMacota);
+            listaMascotas.Add(nuevaMascota);
 
             foreach (var item in listaMascotas)
             {
@@ -85,6 +126,11 @@ namespace pryRodriguezMascotas
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
         }
     }
 
